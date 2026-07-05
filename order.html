@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order &amp; Refill — Tankey Pharmacy</title>
+<meta name="description" content="Review your cart and submit an order, or request a prescription refill at Tankey Pharmacy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 72 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/>
+        <rect x="24" y="29" width="34" height="6" fill="currentColor"/>
+        <rect x="47" y="18" width="6" height="28" fill="#B9862F"/>
+      </svg>
+      <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="order.html" class="active">Order &amp; Refill</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="order.html" class="cart-pill" aria-label="View cart">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="btn-label">Cart</span>
+        <span class="count" data-cart-count>0</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header wrap">
+    <span class="eyebrow">
+      <svg class="key-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="6"/><rect x="24" y="27" width="34" height="10" fill="currentColor"/><rect x="47" y="14" width="10" height="36" fill="currentColor"/></svg>
+      Order &amp; refill
+    </span>
+    <h1>Review your order.</h1>
+    <p class="lede">Submit your cart as a pick-up or delivery order, or send us a refill request directly — no account needed.</p>
+  </div>
+
+  <section style="padding-top:20px;">
+    <div class="wrap">
+      <div class="order-tabs">
+        <button type="button" class="order-tab active" data-target="panel-cart">Your cart</button>
+        <button type="button" class="order-tab" data-target="panel-refill">Refill a prescription</button>
+      </div>
+
+      <!-- CART PANEL -->
+      <div class="order-panel active" id="panel-cart">
+        <div id="cart-list"></div>
+        <div class="cart-summary">
+          <div class="summary-box">
+            <div class="summary-line total">
+              <span>Total</span>
+              <span id="summary-total">₦0</span>
+            </div>
+            <p class="field-note" style="margin-top:10px;">Payment is made on pickup or delivery. We'll confirm availability by phone before preparing your order.</p>
+            <button type="button" class="btn btn-primary" id="submit-cart-btn" style="width:100%; margin-top:12px;" disabled>Submit order</button>
+          </div>
+        </div>
+        <div class="confirm-panel" id="cart-confirm">
+          <h3>Order received 🎉</h3>
+          <p>Your reference number:</p>
+          <div class="ref" id="cart-confirm-ref"></div>
+          <p>We'll call or WhatsApp you shortly to confirm pickup or delivery details.</p>
+        </div>
+      </div>
+
+      <!-- REFILL PANEL -->
+      <div class="order-panel" id="panel-refill">
+        <form id="refill-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="rf-name">Full name</label>
+              <input type="text" id="rf-name" name="name" required placeholder="e.g. Amaka Johnson">
+            </div>
+            <div class="field">
+              <label for="rf-phone">Phone number</label>
+              <input type="tel" id="rf-phone" name="phone" required placeholder="080…">
+            </div>
+            <div class="field full">
+              <label for="rf-medication">Medication name &amp; strength</label>
+              <input type="text" id="rf-medication" name="medication" required placeholder="e.g. Amlodipine 5mg">
+            </div>
+            <div class="field">
+              <label for="rf-fulfillment">Preferred option</label>
+              <select id="rf-fulfillment" name="fulfillment">
+                <option value="Pickup">Pickup in-store</option>
+                <option value="Delivery">Delivery</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="rf-notes">Anything else we should know? (optional)</label>
+              <textarea id="rf-notes" name="notes" placeholder="Doctor's name, last fill date, allergies, etc."></textarea>
+            </div>
+          </div>
+          <p class="field-note" style="margin:14px 0;">A pharmacist will verify your prescription history before this refill is dispensed.</p>
+          <button type="submit" class="btn btn-primary">Send refill request</button>
+        </form>
+        <div class="confirm-panel" id="refill-confirm">
+          <h3>Refill request sent 🎉</h3>
+          <p>Your reference number:</p>
+          <div class="ref" id="refill-confirm-ref"></div>
+          <p>Our pharmacist will call you to confirm before it's ready.</p>
+        </div>
+      </div>
+
+      <!-- PAST ORDERS -->
+      <div class="past-orders" id="past-orders-section" style="display:none;">
+        <h3>Your recent requests</h3>
+        <p class="field-note">Stored on this device only.</p>
+        <div id="past-orders-list"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/><rect x="24" y="29" width="34" height="6" fill="currentColor"/><rect x="47" y="18" width="6" height="28" fill="#D9BE7D"/></svg>
+          <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+        </a>
+        <p>Genuine medicines and real advice, every day of the week.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order &amp; refill</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2348035550142">0803 555 0142</a></li>
+          <li><a href="mailto:hello@tankeypharmacy.ng">hello@tankeypharmacy.ng</a></li>
+          <li>Garki, Abuja, FCT</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tankey Pharmacy. All rights reserved.</span>
+      <span>Demo site — no real transactions are processed.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

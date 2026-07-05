@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Tankey Pharmacy</title>
+<meta name="description" content="Browse medicines and health products at Tankey Pharmacy — pain relief, antimalarials, vitamins, mother & baby care, first aid and more.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 72 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/>
+        <rect x="24" y="29" width="34" height="6" fill="currentColor"/>
+        <rect x="47" y="18" width="6" height="28" fill="#B9862F"/>
+      </svg>
+      <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="order.html">Order &amp; Refill</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="order.html" class="cart-pill" aria-label="View cart">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="btn-label">Cart</span>
+        <span class="count" data-cart-count>0</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header wrap">
+    <span class="eyebrow">
+      <svg class="key-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="6"/><rect x="24" y="27" width="34" height="10" fill="currentColor"/><rect x="47" y="14" width="10" height="36" fill="currentColor"/></svg>
+      Full catalog
+    </span>
+    <h1>Find what you need.</h1>
+    <p class="lede">Search or filter by category, then add items to your cart. You'll review everything before it's sent through as an order.</p>
+  </div>
+
+  <section style="padding-top:24px;">
+    <div class="wrap">
+      <div class="toolbar">
+        <input type="search" id="product-search" class="search-input" placeholder="Search medicines, e.g. paracetamol, ORS, vitamin C…" aria-label="Search products">
+      </div>
+      <div class="chip-row" id="category-chips" style="margin-bottom:28px;">
+        <button type="button" class="chip active" data-category="All">All</button>
+        <button type="button" class="chip" data-category="Pain & Fever">Pain &amp; Fever</button>
+        <button type="button" class="chip" data-category="Antimalarials">Antimalarials</button>
+        <button type="button" class="chip" data-category="Antibiotics">Antibiotics</button>
+        <button type="button" class="chip" data-category="Vitamins & Supplements">Vitamins &amp; Supplements</button>
+        <button type="button" class="chip" data-category="Mother & Baby">Mother &amp; Baby</button>
+        <button type="button" class="chip" data-category="First Aid">First Aid</button>
+        <button type="button" class="chip" data-category="Skin & Personal Care">Skin &amp; Personal Care</button>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+
+      <div class="empty-state" id="empty-state" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        <p>No products match your search. Try a different term or category.</p>
+      </div>
+
+      <div class="mini-cart hidden" id="mini-cart">
+        <span id="mini-cart-count">0 items in cart</span>
+        <span class="total" id="mini-cart-total">₦0</span>
+        <a href="order.html" class="btn btn-gold btn-sm">Go to order</a>
+      </div>
+    </div>
+  </section>
+
+  <p style="text-align:center; color:var(--ink-soft); font-size:0.85rem; margin-top:8px;">
+    Items marked <strong>Prescription</strong> require a valid prescription, which our pharmacist will confirm before dispensing.
+  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/><rect x="24" y="29" width="34" height="6" fill="currentColor"/><rect x="47" y="18" width="6" height="28" fill="#D9BE7D"/></svg>
+          <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+        </a>
+        <p>Genuine medicines and real advice, every day of the week.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order &amp; refill</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2348035550142">0803 555 0142</a></li>
+          <li><a href="mailto:hello@tankeypharmacy.ng">hello@tankeypharmacy.ng</a></li>
+          <li>Garki, Abuja, FCT</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tankey Pharmacy. All rights reserved.</span>
+      <span>Demo site — no real transactions are processed.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

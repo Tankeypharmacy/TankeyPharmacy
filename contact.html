@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Tankey Pharmacy</title>
+<meta name="description" content="Visit or contact Tankey Pharmacy in Asaba, Delta. Opening hours, phone, WhatsApp and a direct message form.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 72 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/>
+        <rect x="24" y="29" width="34" height="6" fill="currentColor"/>
+        <rect x="47" y="18" width="6" height="28" fill="#B9862F"/>
+      </svg>
+      <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="order.html">Order &amp; Refill</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="order.html" class="cart-pill" aria-label="View cart">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="btn-label">Cart</span>
+        <span class="count" data-cart-count>0</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header wrap">
+    <span class="eyebrow">
+      <svg class="key-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="6"/><rect x="24" y="27" width="34" height="10" fill="currentColor"/><rect x="47" y="14" width="10" height="36" fill="currentColor"/></svg>
+      Get in touch
+    </span>
+    <h1>We'd love to hear from you.</h1>
+    <p class="lede">Visit the store, call, WhatsApp, or send a message below — whichever's easiest.</p>
+  </div>
+
+  <section>
+    <div class="wrap contact-grid">
+      <div>
+        <ul class="info-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span> Okpanam road,Asaba,Delta State, Nigeria</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.79.66 2.64a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.44-1.44a2 2 0 012.11-.45c.85.32 1.74.54 2.64.66A2 2 0 0122 16.92z"/></svg>
+            <span><a href="tel:+2348063927767">0806 392 7767</a> · Call or WhatsApp</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+            <span><a href="mailto:tankeyspharmacy@gmal.com">tankeyspharmacy@gmal.com</a></span>
+          </li>
+        </ul>
+
+        <table class="hours-table" aria-label="Opening hours" style="margin-bottom:24px;">
+          <tr><td>Monday – Friday</td><td>7:00am – 10:00pm</td></tr>
+          <tr><td>Saturday</td><td>8:00am – 10:00pm</td></tr>
+          <tr><td>Sunday</td><td>9:00am – 8:00pm</td></tr>
+          <tr><td>Public holidays</td><td>10:00am – 6:00pm</td></tr>
+        </table>
+
+        <div class="map-frame">
+          <iframe title="Map showing Asaba, Delta" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=7.470%2C9.010%2C7.510%2C9.045&layer=mapnik&marker=9.0285%2C7.4895">
+          </iframe>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="mt-0">Send a message</h2>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="field full">
+              <label for="c-name">Your name</label>
+              <input type="text" id="c-name" name="name" required placeholder="Full name">
+            </div>
+            <div class="field full">
+              <label for="c-email">Email or phone</label>
+              <input type="text" id="c-email" name="email" required placeholder="So we can reply">
+            </div>
+            <div class="field full">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" required placeholder="How can we help?"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:14px;">Send message</button>
+        </form>
+        <div class="confirm-panel" id="contact-confirm" style="margin-top:20px;">
+          <h3>Message sent 🎉</h3>
+          <p>We'll get back to you as soon as we can.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/><rect x="24" y="29" width="34" height="6" fill="currentColor"/><rect x="47" y="18" width="6" height="28" fill="#D9BE7D"/></svg>
+          <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+        </a>
+        <p>Genuine medicines and real advice, every day of the week.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="order.html">Order &amp; refill</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2348035550142">0803 555 0142</a></li>
+          <li><a href="mailto:hello@tankeypharmacy.ng">hello@tankeypharmacy.ng</a></li>
+          <li>Garki, Abuja, FCT</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tankey Pharmacy. All rights reserved.</span>
+      <span>Demo site — no real transactions are processed.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
