@@ -1,148 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact — Tankey Pharmacy</title>
-<meta name="description" content="Visit or contact Tankey Pharmacy in Asaba, Delta. Opening hours, phone, WhatsApp and a direct message form.">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Find Tankey Pharmacy on Okpanam Road, Asaba — open 24/7. Call, WhatsApp, or send a message." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body data-page="contact">
 
 <header class="site-header">
-  <nav class="nav wrap">
+  <div class="container nav-row">
     <a href="index.html" class="brand">
-      <svg class="brand-mark" viewBox="0 0 72 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/>
-        <rect x="24" y="29" width="34" height="6" fill="currentColor"/>
-        <rect x="47" y="18" width="6" height="28" fill="#B9862F"/>
+      <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="14" cy="22" r="9" stroke="#1F6F5C" stroke-width="3.2"/>
+        <line x1="14" y1="17.5" x2="14" y2="26.5" stroke="#B8863B" stroke-width="2.6" stroke-linecap="round"/>
+        <line x1="9.5" y1="22" x2="18.5" y2="22" stroke="#B8863B" stroke-width="2.6" stroke-linecap="round"/>
+        <line x1="22.5" y1="22" x2="38" y2="22" stroke="#B8863B" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M30 22 L33 22 L34.5 17 L36.5 27 L38 22" stroke="#D65A3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
-      <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
+      <span class="brand-word">Tankey Pharmacy<small>Where care is the key</small></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="order.html">Order &amp; Refill</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+    <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html" data-page-link="home">Home</a></li>
+      <li><a href="products.html" data-page-link="products">Products</a></li>
+      <li><a href="order.html" data-page-link="order">Order &amp; Refill</a></li>
+      <li><a href="contact.html" data-page-link="contact">Contact</a></li>
+      <li>
+        <a href="order.html" class="nav-cart" aria-label="View order">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge" data-cart-badge>0</span>
+        </a>
+      </li>
     </ul>
-    <div class="nav-cta">
-      <a href="order.html" class="cart-pill" aria-label="View cart">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        <span class="btn-label">Cart</span>
-        <span class="count" data-cart-count>0</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </nav>
+  </div>
 </header>
 
 <main>
-  <div class="page-header wrap">
-    <span class="eyebrow">
-      <svg class="key-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="6"/><rect x="24" y="27" width="34" height="10" fill="currentColor"/><rect x="47" y="14" width="10" height="36" fill="currentColor"/></svg>
-      Get in touch
-    </span>
-    <h1>We'd love to hear from you.</h1>
-    <p class="lede">Visit the store, call, WhatsApp, or send a message below — whichever's easiest.</p>
-  </div>
+  <section style="padding-bottom:0;">
+    <div class="container">
+      <span class="eyebrow">Get in touch</span>
+      <h1 style="font-size:clamp(1.8rem,3.6vw,2.6rem);">Come see us, any time</h1>
+      <p style="max-width:60ch;">We're open around the clock on Okpanam Road, Asaba. Walk in, call, or send a message below.</p>
+    </div>
+  </section>
 
-  <section>
-    <div class="wrap contact-grid">
+  <section style="padding-top:24px;">
+    <div class="container two-col">
       <div>
-        <ul class="info-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span> Okpanam road,Asaba,Delta State, Nigeria</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.79.66 2.64a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.44-1.44a2 2 0 012.11-.45c.85.32 1.74.54 2.64.66A2 2 0 0122 16.92z"/></svg>
-            <span><a href="tel:+2348063927767">0806 392 7767</a> · Call or WhatsApp</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
-            <span><a href="mailto:tankeyspharmacy@gmal.com">tankeyspharmacy@gmal.com</a></span>
-          </li>
-        </ul>
+        <div class="grid-3" style="grid-template-columns:1fr; gap:16px; margin-bottom:28px;">
+          <div class="card">
+            <div class="feature-card">
+              <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <h3>Address</h3>
+              <p class="mt-0">Okpanam Road, Asaba, Delta State</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="feature-card">
+              <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <h3>Phone &amp; WhatsApp</h3>
+              <p class="mt-0"><a href="tel:+2348063927767">0806 392 7767</a></p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="feature-card">
+              <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <h3>Hours</h3>
+              <p class="mt-0">Open 24 hours a day, 7 days a week.</p>
+            </div>
+          </div>
+        </div>
 
-        <table class="hours-table" aria-label="Opening hours" style="margin-bottom:24px;">
-          <tr><td>Monday – Friday</td><td>7:00am – 10:00pm</td></tr>
-          <tr><td>Saturday</td><td>8:00am – 10:00pm</td></tr>
-          <tr><td>Sunday</td><td>9:00am – 8:00pm</td></tr>
-          <tr><td>Public holidays</td><td>10:00am – 6:00pm</td></tr>
-        </table>
-
-        <div class="map-frame">
-          <iframe title="Map showing Asaba, Delta" loading="lazy"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=7.470%2C9.010%2C7.510%2C9.045&layer=mapnik&marker=9.0285%2C7.4895">
+        <div class="map-embed">
+          <iframe
+            title="Map showing Okpanam Road, Asaba"
+            src="https://maps.google.com/maps?q=Okpanam%20Road%2C%20Asaba%2C%20Delta%20State&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
 
       <div>
-        <h2 class="mt-0">Send a message</h2>
-        <form id="contact-form">
-          <div class="form-grid">
-            <div class="field full">
-              <label for="c-name">Your name</label>
-              <input type="text" id="c-name" name="name" required placeholder="Full name">
-            </div>
-            <div class="field full">
-              <label for="c-email">Email or phone</label>
-              <input type="text" id="c-email" name="email" required placeholder="So we can reply">
-            </div>
-            <div class="field full">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" required placeholder="How can we help?"></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top:14px;">Send message</button>
-        </form>
-        <div class="confirm-panel" id="contact-confirm" style="margin-top:20px;">
-          <h3>Message sent 🎉</h3>
-          <p>We'll get back to you as soon as we can.</p>
+        <h2 style="font-size:1.3rem;">Send a message</h2>
+        <p style="font-size:0.9rem;">For anything that isn't an order — questions, feedback, or bulk enquiries — write to us here.</p>
+        <div class="field">
+          <label for="msg-name">Name</label>
+          <input type="text" id="msg-name" placeholder="Your name" />
         </div>
+        <div class="field">
+          <label for="msg-contact">Phone or email</label>
+          <input type="text" id="msg-contact" placeholder="How should we reach you?" />
+        </div>
+        <div class="field">
+          <label for="msg-body">Message</label>
+          <textarea id="msg-body" placeholder="How can we help?"></textarea>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button class="btn btn-primary" id="msg-whatsapp-btn">Send via WhatsApp</button>
+          <a class="btn btn-outline" id="msg-email-btn" href="#">Send via email</a>
+        </div>
+        <div id="msg-confirm"></div>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="brand" style="margin-bottom:14px;">
-          <svg class="brand-mark" viewBox="0 0 72 64" fill="none"><circle cx="14" cy="32" r="11" stroke="currentColor" stroke-width="5"/><rect x="24" y="29" width="34" height="6" fill="currentColor"/><rect x="47" y="18" width="6" height="28" fill="#D9BE7D"/></svg>
-          <span class="brand-text">Tankey Pharmacy<small>Where care is the key</small></span>
-        </a>
-        <p>Genuine medicines and real advice, every day of the week.</p>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="14" cy="22" r="9" stroke="#6FB6A3" stroke-width="3.2"/>
+          <line x1="14" y1="17.5" x2="14" y2="26.5" stroke="#D9B876" stroke-width="2.6" stroke-linecap="round"/>
+          <line x1="9.5" y1="22" x2="18.5" y2="22" stroke="#D9B876" stroke-width="2.6" stroke-linecap="round"/>
+          <line x1="22.5" y1="22" x2="38" y2="22" stroke="#D9B876" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">Tankey Pharmacy</span>
       </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="order.html">Order &amp; refill</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+2348035550142">0803 555 0142</a></li>
-          <li><a href="mailto:hello@tankeypharmacy.ng">hello@tankeypharmacy.ng</a></li>
-          <li>Garki, Abuja, FCT</li>
-        </ul>
-      </div>
+      <p style="color:rgba(255,255,255,0.7); max-width:34ch;">Where care is the key. Serving the community with genuine medicines and honest guidance.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Tankey Pharmacy. All rights reserved.</span>
-      <span>Demo site — no real transactions are processed.</span>
+    <div>
+      <h4>Explore</h4>
+      <ul class="footer-list">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order &amp; refill</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+    <div>
+      <h4>Hours</h4>
+      <ul class="footer-list">
+        <li>Open 24/7</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul class="footer-list">
+        <li><a href="tel:+2348063927767">0806 392 7767</a></li>
+        <li><a href="mailto:orders@tankeypharmacy.example">orders@tankeypharmacy.example</a></li>
+        <li>Okpanam Road, Asaba, Delta State</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Tankey Pharmacy. All rights reserved.</span>
+    <span>Open 24/7 · Okpanam Road, Asaba, Delta State</span>
   </div>
 </footer>
 
-<script src="products-data.js"></script>
-<script src="script.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function buildMessage() {
+    const name = document.getElementById("msg-name").value.trim();
+    const contact = document.getElementById("msg-contact").value.trim();
+    const body = document.getElementById("msg-body").value.trim();
+    return { name, contact, body };
+  }
+
+  function messageText(m) {
+    return `Message to Tankey Pharmacy\nName: ${m.name}\nContact: ${m.contact}\n\n${m.body}`;
+  }
+
+  document.getElementById("msg-whatsapp-btn").addEventListener("click", () => {
+    const m = buildMessage();
+    if (!m.name || !m.body) { alert("Please add your name and a message."); return; }
+    const url = `https://wa.me/${TANKEY_CONFIG.whatsapp}?text=${encodeURIComponent(messageText(m))}`;
+    window.open(url, "_blank");
+    document.getElementById("msg-confirm").innerHTML = `<p class="hint" style="margin-top:10px;">Opening WhatsApp with your message filled in…</p>`;
+  });
+
+  document.getElementById("msg-email-btn").addEventListener("click", (e) => {
+    e.preventDefault();
+    const m = buildMessage();
+    if (!m.name || !m.body) { alert("Please add your name and a message."); return; }
+    const subject = encodeURIComponent("Message from the Tankey Pharmacy website");
+    window.location.href = `mailto:${TANKEY_CONFIG.pharmacyEmail}?subject=${subject}&body=${encodeURIComponent(messageText(m))}`;
+  });
+</script>
 </body>
 </html>
+
